@@ -9,7 +9,7 @@ Feature: Validate Recruitment functionality in the web site Orange HRM
     And select Recruitment and add
     When fill all field required
       | firstName | lastName | vacancy               | email           | contactNumber | keywords |
-      | Leo       | Rosi     | Payroll Administrator | email@gmail.com | 3001234567    | work     |
+      | Chia      | Rosed    | Payroll Administrator | email@gmail.com | 3001234567    | work     |
     And schedules the interview
       | interviewTitle | date       |
       | Interview      | 2024-29-08 |

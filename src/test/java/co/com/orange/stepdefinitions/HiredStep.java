@@ -1,7 +1,6 @@
 package co.com.orange.stepdefinitions;
 
 import co.com.orange.models.CandidateModel;
-import co.com.orange.models.CandidateStatusModel;
 import co.com.orange.models.InterviewModel;
 import co.com.orange.questions.ValidateText;
 import co.com.orange.tasks.InterviewForm;
@@ -44,15 +43,6 @@ public class HiredStep {
                 row.get("date"),
                 row.get("interviewer"),
                 row.get("interviewTitle")
-        );
-    }
-
-    @DataTableType(replaceWithEmptyString = "[anonymous]")
-    public CandidateStatusModel candidateStatusModelEntryTransformer(Map<String, String> row) {
-        return new CandidateStatusModel(
-                row.get("candidate"),
-                row.get("status"),
-                row.get("vacancy")
         );
     }
 
