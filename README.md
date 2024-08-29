@@ -18,3 +18,4 @@ Por comando gradle
 ## Autor
 
 - Jorge Franco
+- jorgeandresft@gmail.com
