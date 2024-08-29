@@ -3,7 +3,13 @@
 
 Ingresa a la página web https://opensource-demo.orangehrmlive.com/web/index.php/auth/login y procede a iniciar sesión, realizar el proceso de contratación, validar la información y el estado "Hired".
 
+Lenguajes de programación:
+
+- Java
+- Gherkin
+
 Para el reto se implemento:
+
 - Serenity BDD
 - Cucumber
 - Screenplay
