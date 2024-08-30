@@ -5,10 +5,14 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Hit;
 import org.openqa.selenium.Keys;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static co.com.orange.ui.RecruitmentPage.VACANCY_DIV;
 
 public class ArrowDown implements Task {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ArrowDown.class);
 
     private final String vacancy;
 
@@ -18,7 +22,7 @@ public class ArrowDown implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        int cant;
+        int cant = 0;
 
         switch (vacancy) {
             case "Junior Account Assistant":
@@ -43,7 +47,7 @@ public class ArrowDown implements Task {
                 cant = 7;
                 break;
             default:
-                cant = 8;
+                LOGGER.info("Option not defined");
         }
 
         for (int i = 1; i <= cant; i++) {

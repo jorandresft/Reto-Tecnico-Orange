@@ -37,7 +37,7 @@ ext {
     serenityCucumberVersion = '3.3.4'
     junitVersion = '5.8.2'
     assertJVersion = '3.22.0'
-    logbackVersion = '1.2.10'
+    logbackVersion = '1.4.5'
     lombokVersion = '1.18.22'
     log4jVersion = '2.17.1'
 }

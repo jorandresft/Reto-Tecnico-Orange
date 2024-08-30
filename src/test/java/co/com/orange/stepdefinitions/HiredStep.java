@@ -10,6 +10,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -21,6 +23,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static org.hamcrest.Matchers.equalTo;
 
 public class HiredStep {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(HiredStep.class);
 
     @DataTableType(replaceWithEmptyString = "[anonymous]")
     public CandidateModel candidateEntryTransformer(Map<String, String> row) {
@@ -48,6 +52,10 @@ public class HiredStep {
         theActorCalled(ACTOR).attemptsTo(
                 EnterCredentials.enterCredentials(username, password)
         );
+        LOGGER.atInfo()
+                .setMessage("init session with his credentials username: {} and password: {}")
+                .addArgument(username)
+                .addArgument(password).log();
     }
 
     @And("select Recruitment and click on add")
@@ -55,6 +63,7 @@ public class HiredStep {
         theActorCalled(ACTOR).attemptsTo(
                 Recruitment.clickRecruitment()
         );
+        LOGGER.info("select Recruitment and click on add");
     }
 
     @When("fill all field required")
@@ -62,6 +71,12 @@ public class HiredStep {
         theActorCalled(ACTOR).attemptsTo(
                 RecruitmentForm.fillInfo(candidateInfo.get(0))
         );
+        LOGGER.atInfo()
+                .setMessage("fill all field required, Name: {} Vacancy: {} Email: {}")
+                .addArgument(candidateInfo.get(0).getFirstName() +" "+ candidateInfo.get(0).getLastName())
+                .addArgument(candidateInfo.get(0).getVacancy())
+                .addArgument(candidateInfo.get(0).getEmail())
+                .log();
     }
 
     @And("click on Shortlist and Save")
@@ -70,6 +85,7 @@ public class HiredStep {
                 Shortlist.shortList(),
                 SaveShortlist.saveShortlist()
         );
+        LOGGER.info("click on Shortlist and Save");
     }
 
     @And("click on Schedule Interview and fill all field required")
@@ -78,6 +94,7 @@ public class HiredStep {
                 ScheduleInterview.scheduleInterview(),
                 InterviewForm.fillInfo(interviewInfo.get(0))
         );
+        LOGGER.info("click on Schedule Interview and fill all field required");
     }
 
     @And("click on mark interview passed and Save")
@@ -86,6 +103,7 @@ public class HiredStep {
                 MarkInterviewPassed.markInterviewPassed(),
                 SaveMarkInterviewPassed.saveMarkInterviewPassed()
         );
+        LOGGER.info("click on mark interview passed and Save");
     }
 
     @And("click on offer job and Save")
@@ -94,6 +112,7 @@ public class HiredStep {
                 OfferJob.offerJob(),
                 SaveOfferJob.saveOfferJob()
         );
+        LOGGER.info("click on offer job and Save");
     }
 
     @Then("click on Hire and Save")
@@ -103,6 +122,7 @@ public class HiredStep {
                 SaveHire.saveHire(),
                 Hired.getHiredStatus()
         );
+        LOGGER.info("click on Hire and Save");
     }
 
     @And("should see the information is correct")
@@ -123,5 +143,11 @@ public class HiredStep {
                 seeThat(ValidateText.validateText(STATUS_VALUE),
                         equalTo(textStatus.substring(8)))
         );
+        LOGGER.atInfo()
+                .setMessage("should see the information is correct, Name: {} Vacancy: {} Status: {}")
+                .addArgument(textName)
+                .addArgument(textVacancy)
+                .addArgument(textStatus.substring(8))
+                .log();
     }
 }

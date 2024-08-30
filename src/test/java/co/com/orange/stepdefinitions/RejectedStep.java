@@ -8,6 +8,8 @@ import co.com.orange.utils.SearchCandidate;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.actors.OnStage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static co.com.orange.ui.HomePage.*;
 import static co.com.orange.utils.Constants.*;
@@ -17,6 +19,8 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class RejectedStep {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(RejectedStep.class);
+
     @And("click on Reject and Save")
     public void clickOnRejectAndSave() {
         theActorCalled(ACTOR).attemptsTo(
@@ -24,6 +28,7 @@ public class RejectedStep {
                 SaveShortlist.saveShortlist(),
                 Rejected.getRejectedStatus()
         );
+        LOGGER.info("click on Reject and Save");
     }
 
     @Then("should see the status is Rejected")
@@ -44,5 +49,11 @@ public class RejectedStep {
                 seeThat(ValidateText.validateText(REJECT_STATUS_VALUE),
                         equalTo(textStatus.substring(8)))
         );
+        LOGGER.atInfo()
+                .setMessage("should see the status is Rejected, Name: {} Vacancy: {} Status: {}")
+                .addArgument(textName)
+                .addArgument(textVacancy)
+                .addArgument(textStatus.substring(8))
+                .log();
     }
 }
