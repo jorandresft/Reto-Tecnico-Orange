@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static co.com.orange.ui.SaveMarkInterviewPassedPage.SAVE_BUTTON;
 
 public class SaveMarkInterviewPassed implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

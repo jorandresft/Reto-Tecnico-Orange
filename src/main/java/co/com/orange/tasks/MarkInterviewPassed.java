@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static co.com.orange.ui.InterviewScheduledPage.MARK_INTERVIEW_PASSED_BUTTON;
 
 public class MarkInterviewPassed implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

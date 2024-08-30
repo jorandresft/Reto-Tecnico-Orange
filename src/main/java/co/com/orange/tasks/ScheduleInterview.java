@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static co.com.orange.ui.ShortlistedPage.SCHEDULE_INTERVIEW_BUTTON;
 
 public class ScheduleInterview implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class ApplicationInitiatedPage extends PageObject {
 
-    public static final Target REJECT_BUTTON = Target.the("Shortlist button")
+    public static final Target REJECT_BUTTON = Target.the("Reject button")
             .locatedBy(".orangehrm-recruitment-actions button:nth-child(1)");
     public static final Target SHORTLIST_BUTTON = Target.the("Shortlist button")
             .locatedBy(".orangehrm-recruitment-actions button:nth-child(2)");

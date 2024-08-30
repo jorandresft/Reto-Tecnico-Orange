@@ -11,6 +11,7 @@ import static co.com.orange.ui.SaveOfferJobPage.SAVE_BUTTON;
 
 
 public class SaveOfferJob implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

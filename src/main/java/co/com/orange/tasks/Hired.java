@@ -12,6 +12,7 @@ import static co.com.orange.ui.HomePage.RECRUITMENT_ITEM;
 import static co.com.orange.utils.Constants.REMEMBER_STATUS;
 
 public class Hired implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -33,5 +34,3 @@ public class Hired implements Task {
         return Tasks.instrumented(Hired.class);
     }
 }
-
-

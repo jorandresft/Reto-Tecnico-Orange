@@ -11,6 +11,7 @@ import static co.com.orange.ui.HomePage.RECRUITMENT_ITEM;
 import static co.com.orange.ui.RecruitmentPage.ADD_BUTTON;
 
 public class Recruitment implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

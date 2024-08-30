@@ -14,6 +14,10 @@ Para el reto se implemento:
 - Cucumber
 - Screenplay
 
+Features:
+- hired
+- rejected
+
 ## Ejecutar Tests
 
 Por comando gradle

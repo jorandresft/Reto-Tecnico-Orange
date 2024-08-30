@@ -10,7 +10,6 @@ import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static co.com.orange.ui.HomePage.*;
-import static co.com.orange.ui.HomePage.STATUS_VALUE;
 import static co.com.orange.utils.Constants.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;

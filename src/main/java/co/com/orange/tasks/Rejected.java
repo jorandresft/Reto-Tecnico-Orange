@@ -12,6 +12,7 @@ import static co.com.orange.ui.RejectedPage.REJECT_STATUS;
 import static co.com.orange.utils.Constants.REMEMBER_STATUS;
 
 public class Rejected implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

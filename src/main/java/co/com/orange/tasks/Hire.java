@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static co.com.orange.ui.JobOfferedPage.HIRE_BUTTON;
 
 public class Hire implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

@@ -19,7 +19,6 @@ public class RecruitmentPage extends PageObject {
     public static final Target VACANCY_DIV = Target.the("Vacancy div")
             .locatedBy("//div[2]/div/div/div/div[2]/div/div/div[1]");
 
-
     public static final Target ADD_BUTTON = Target.the("Add button")
             .locatedBy(".oxd-button i");
     public static final Target SAVE_BUTTON = Target.the("Save button")

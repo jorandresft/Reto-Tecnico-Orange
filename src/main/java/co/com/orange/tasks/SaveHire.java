@@ -7,9 +7,10 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.orange.ui.SaveHireCandidatePage.SAVE_BUTTON;
+import static co.com.orange.ui.SaveHirePage.SAVE_BUTTON;
 
 public class SaveHire implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

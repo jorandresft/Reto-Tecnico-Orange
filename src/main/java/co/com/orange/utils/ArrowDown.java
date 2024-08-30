@@ -18,7 +18,7 @@ public class ArrowDown implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        int cant = 0;
+        int cant;
 
         switch (vacancy) {
             case "Junior Account Assistant":
@@ -43,7 +43,7 @@ public class ArrowDown implements Task {
                 cant = 7;
                 break;
             default:
-                System.out.println("Missing vacancy");
+                cant = 8;
         }
 
         for (int i = 1; i <= cant; i++) {

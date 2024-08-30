@@ -5,6 +5,6 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class RejectedPage extends PageObject {
 
-    public static final Target REJECT_STATUS = Target.the("Schedule interview button")
+    public static final Target REJECT_STATUS = Target.the("Reject status")
             .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div[1]/form/div[2]/div[1]/p");
 }
