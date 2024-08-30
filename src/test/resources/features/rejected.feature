@@ -9,6 +9,6 @@ Feature: Validate Recruitment functionality in the web site Orange HRM
     And select Recruitment and click on add
     When fill all field required
       | firstName | lastName | vacancy               | email           | contactNumber | keywords |
-      | Mia       | Rojas    | Payroll Administrator | email@gmail.com | 3001234567    | work     |
+      | Nora      | Rojas    | Payroll Administrator | email@gmail.com | 3001234567    | work     |
     And click on Reject and Save
     Then should see the status is Rejected

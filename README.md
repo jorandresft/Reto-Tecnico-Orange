@@ -1,14 +1,13 @@
+## Technical automation challenge
 
-## Reto técnico de automatización
+Go to the website https://opensource-demo.orangehrmlive.com/web/index.php/auth/login and proceed to log in, complete the hiring process, validate the information and the "Hired" status.
 
-Ingresa a la página web https://opensource-demo.orangehrmlive.com/web/index.php/auth/login y procede a iniciar sesión, realizar el proceso de contratación, validar la información y el estado "Hired".
-
-Lenguajes:
+Languages:
 
 - Java
 - Gherkin
 
-Para el reto se implemento:
+For the challenge, the following were implemented:
 
 - Serenity BDD
 - Cucumber
@@ -18,14 +17,16 @@ Features:
 - hired
 - rejected
 
-## Ejecutar Tests
+In the firstName field of the .feature files enter unique names when they are executed at the same time or between executions.
 
-Por comando gradle
+## Run Tests
+
+By gradle command
 
 ```bash
-  gradle clean test
+gradle clean test
 ```
-## Autor
+## Author
 
 - Jorge Franco
 - jorgeandresft@gmail.com
