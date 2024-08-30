@@ -36,29 +36,7 @@ public class RecruitmentForm implements Task {
                         .forNoMoreThan(20L).seconds(),
                 Click.on(SAVE_BUTTON)
         );
-
         waiting(TIME_SHORT);
-
-        String textManager = MANAGER_LABEL.resolveFor(actor).getText();
-        actor.remember(REMEMBER_MANAGER, textManager);
-
-        String textName = NAME_LABEL.resolveFor(actor).getText();
-        actor.remember(REMEMBER_NAME, textName);
-
-        String textVacancy = VACANCY_LABEL.resolveFor(actor).getText();
-        actor.remember(REMEMBER_VACANCY, textVacancy);
-
-        actor.attemptsTo(
-                WaitUntil.the(SHORTLIST_BUTTON, WebElementStateMatchers.isClickable())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(SHORTLIST_BUTTON),
-                WaitUntil.the(SAVE_BUTTON, WebElementStateMatchers.isClickable())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(SAVE_BUTTON),
-                WaitUntil.the(SCHEDULE_INTERVIEW_BUTTON, WebElementStateMatchers.isClickable())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(SCHEDULE_INTERVIEW_BUTTON)
-        );
     }
 
     public static RecruitmentForm fillInfo(CandidateModel candidateModel) {

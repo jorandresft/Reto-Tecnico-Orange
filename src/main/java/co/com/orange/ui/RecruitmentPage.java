@@ -19,19 +19,9 @@ public class RecruitmentPage extends PageObject {
     public static final Target VACANCY_DIV = Target.the("Vacancy div")
             .locatedBy("//div[2]/div/div/div/div[2]/div/div/div[1]");
 
-    public static final Target MANAGER_LABEL = Target.the("Manager label")
-            .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div[1]/form/div[1]/div[3]/div/div[2]/p");
-    public static final Target NAME_LABEL = Target.the("Name label")
-            .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div[1]/form/div[1]/div[1]/div/div[2]/p");
-    public static final Target VACANCY_LABEL = Target.the("Vacancy label")
-            .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div/div[2]/p");
 
     public static final Target ADD_BUTTON = Target.the("Add button")
             .locatedBy(".oxd-button i");
     public static final Target SAVE_BUTTON = Target.the("Save button")
             .locatedBy("//button[text()=' Save ']");
-    public static final Target SCHEDULE_INTERVIEW_BUTTON = Target.the("Schedule interview button")
-            .locatedBy(".orangehrm-recruitment-actions button:nth-child(2)");
-    public static final Target SHORTLIST_BUTTON = Target.the("Shortlist button")
-            .locatedBy(".orangehrm-recruitment-actions button:nth-child(2)");
 }

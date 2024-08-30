@@ -10,6 +10,8 @@ public class HomePage extends PageObject {
 
     public static final Target CANDIDATE_VALUE = Target.the("Candidate value")
             .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[3]/div");
+    public static final Target REJECT_STATUS_VALUE = Target.the("Status values")
+            .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[6]/div");
     public static final Target STATUS_VALUE = Target.the("Status values")
             .locatedBy("//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[6]/div");
     public static final Target VACANCY_VALUE = Target.the("Vacancy value")

@@ -3,10 +3,7 @@ package co.com.orange.stepdefinitions;
 import co.com.orange.models.CandidateModel;
 import co.com.orange.models.InterviewModel;
 import co.com.orange.questions.ValidateText;
-import co.com.orange.tasks.InterviewForm;
-import co.com.orange.tasks.Recruitment;
-import co.com.orange.tasks.EnterCredentials;
-import co.com.orange.tasks.RecruitmentForm;
+import co.com.orange.tasks.*;
 import co.com.orange.utils.SearchCandidate;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
@@ -53,7 +50,7 @@ public class HiredStep {
         );
     }
 
-    @And("select Recruitment and add")
+    @And("select Recruitment and click on add")
     public void selectRecruitmentAndAdd() {
         theActorCalled(ACTOR).attemptsTo(
                 Recruitment.clickRecruitment()
@@ -67,16 +64,49 @@ public class HiredStep {
         );
     }
 
-    @And("schedules the interview")
+    @And("click on Shortlist and Save")
+    public void clickOnShortlistAndSave() {
+        theActorCalled(ACTOR).attemptsTo(
+                Shortlist.shortList(),
+                SaveShortlist.saveShortlist()
+        );
+    }
+
+    @And("click on Schedule Interview and fill all field required")
     public void schedulesTheInterview(List<InterviewModel> interviewInfo) {
         theActorCalled(ACTOR).attemptsTo(
+                ScheduleInterview.scheduleInterview(),
                 InterviewForm.fillInfo(interviewInfo.get(0))
         );
     }
 
-    @Then("he should see the information is correct")
-    public void heShouldSeeTheInformationIsCorrectAndStatusIs() {
+    @And("click on mark interview passed and Save")
+    public void clickOnMarkInterviewPassedAndSave() {
+        theActorCalled(ACTOR).attemptsTo(
+                MarkInterviewPassed.markInterviewPassed(),
+                SaveMarkInterviewPassed.saveMarkInterviewPassed()
+        );
+    }
 
+    @And("click on offer job and Save")
+    public void clickOnOfferJobAndSave() {
+        theActorCalled(ACTOR).attemptsTo(
+                OfferJob.offerJob(),
+                SaveOfferJob.saveOfferJob()
+        );
+    }
+
+    @Then("click on Hire and Save")
+    public void clickOnHireAndSave() {
+        theActorCalled(ACTOR).attemptsTo(
+                Hire.hire(),
+                SaveHire.saveHire(),
+                Hired.getHiredStatus()
+        );
+    }
+
+    @And("should see the information is correct")
+    public void heShouldSeeTheInformationIsCorrectAndStatusIs() {
         String textName = theActorCalled(ACTOR).recall(REMEMBER_NAME);
         String textVacancy = theActorCalled(ACTOR).recall(REMEMBER_VACANCY);
         String textStatus = theActorCalled(ACTOR).recall(REMEMBER_STATUS);

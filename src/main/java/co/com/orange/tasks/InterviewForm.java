@@ -1,7 +1,6 @@
 package co.com.orange.tasks;
 
 import co.com.orange.models.InterviewModel;
-import co.com.orange.ui.ScheduleInterviewPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -12,8 +11,6 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
-
-import static co.com.orange.ui.HomePage.RECRUITMENT_ITEM;
 import static co.com.orange.ui.ScheduleInterviewPage.*;
 import static co.com.orange.utils.Constants.*;
 import static co.com.orange.utils.Time.waiting;
@@ -48,36 +45,7 @@ public class InterviewForm implements Task {
                 Enter.theValue(interviewModel.getDate()).into(DATE_INPUT),
                 WaitUntil.the(SAVE_BUTTON, WebElementStateMatchers.isVisible())
                         .forNoMoreThan(20L).seconds(),
-                Click.on(ScheduleInterviewPage.SAVE_BUTTON),
-                WaitUntil.the(MARK_INTERVIEW_PASSED_BUTTON, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(MARK_INTERVIEW_PASSED_BUTTON),
-                WaitUntil.the(SAVE_BUTTON, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(ScheduleInterviewPage.SAVE_BUTTON),
-                WaitUntil.the(OFFER_JOB_BUTTON, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(OFFER_JOB_BUTTON),
-                WaitUntil.the(SAVE_BUTTON, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(ScheduleInterviewPage.SAVE_BUTTON),
-                WaitUntil.the(HIRE_BUTTON, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(HIRE_BUTTON),
-                WaitUntil.the(SAVE_BUTTON, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(SAVE_BUTTON),
-                WaitUntil.the(STATUS_LABEL, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds()
-        );
-
-        String textStatus = STATUS_LABEL.resolveFor(actor).getText();
-        actor.remember(REMEMBER_STATUS, textStatus);
-
-        actor.attemptsTo(
-                WaitUntil.the(RECRUITMENT_ITEM, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(20L).seconds(),
-                Click.on(RECRUITMENT_ITEM)
+                Click.on(SAVE_BUTTON)
         );
     }
 
