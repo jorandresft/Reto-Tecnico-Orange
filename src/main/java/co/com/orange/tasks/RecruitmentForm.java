@@ -27,7 +27,7 @@ public class RecruitmentForm implements Task {
                 Enter.theValue(candidateModel.getFirstName()).into(FIRST_NAME_INPUT),
                 Enter.theValue(candidateModel.getLastName()).into(LAST_NAME_INPUT),
                 Click.on(VACANCY_DIV),
-                ArrowDown.arrowDown(candidateModel.getVacancy()),
+                ArrowDown.selectVacancy(candidateModel.getVacancy()),
                 Enter.theValue(candidateModel.getEmail()).into(EMAIL_INPUT),
                 Enter.theValue(candidateModel.getContactNumber()).into(CONTACT_NUMBER_INPUT),
                 Scroll.to(KEYWORDS_INPUT),
@@ -39,7 +39,7 @@ public class RecruitmentForm implements Task {
         waiting(TIME_SHORT);
     }
 
-    public static RecruitmentForm fillInfo(CandidateModel candidateModel) {
+    public static RecruitmentForm fillInfoCandidate(CandidateModel candidateModel) {
         return Tasks.instrumented(RecruitmentForm.class, candidateModel);
     }
 }

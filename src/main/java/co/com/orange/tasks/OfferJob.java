@@ -20,7 +20,7 @@ public class OfferJob implements Task {
         );
     }
 
-    public static OfferJob offerJob() {
+    public static OfferJob clickOnOfferJobButton() {
         return Tasks.instrumented(OfferJob.class);
     }
 }

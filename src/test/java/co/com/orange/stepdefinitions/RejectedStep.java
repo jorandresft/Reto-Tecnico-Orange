@@ -3,7 +3,7 @@ package co.com.orange.stepdefinitions;
 import co.com.orange.questions.ValidateText;
 import co.com.orange.tasks.Rejected;
 import co.com.orange.tasks.SaveShortlist;
-import co.com.orange.tasks.ShortlistReject;
+import co.com.orange.tasks.rejectCandidate;
 import co.com.orange.utils.SearchCandidate;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -24,8 +24,8 @@ public class RejectedStep {
     @And("click on Reject and Save")
     public void clickOnRejectAndSave() {
         theActorCalled(ACTOR).attemptsTo(
-                ShortlistReject.shortlistReject(),
-                SaveShortlist.saveShortlist(),
+                rejectCandidate.shortlistReject(),
+                SaveShortlist.clickOnSaveShortlistButton(),
                 Rejected.getRejectedStatus()
         );
         LOGGER.info("click on Reject and Save");

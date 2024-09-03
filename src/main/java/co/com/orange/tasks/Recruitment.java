@@ -24,7 +24,7 @@ public class Recruitment implements Task {
         );
     }
 
-    public static Recruitment clickRecruitment() {
+    public static Recruitment clickOnRecruitmentItemAndAddButton() {
         return Tasks.instrumented(Recruitment.class);
     }
 }

@@ -21,7 +21,7 @@ public class SaveOfferJob implements Task {
         );
     }
 
-    public static SaveOfferJob saveOfferJob() {
+    public static SaveOfferJob clickOnSaveOfferJobButton() {
         return Tasks.instrumented(SaveOfferJob.class);
     }
 }

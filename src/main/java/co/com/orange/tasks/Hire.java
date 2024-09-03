@@ -20,7 +20,7 @@ public class Hire implements Task {
         );
     }
 
-    public static Hire hire() {
+    public static Hire clickOnHireButton() {
         return Tasks.instrumented(Hire.class);
     }
 }

@@ -11,7 +11,7 @@ import static co.com.orange.ui.ApplicationInitiatedPage.*;
 import static co.com.orange.ui.ApplicationInitiatedPage.VACANCY_LABEL;
 import static co.com.orange.utils.Constants.*;
 
-public class ShortlistReject implements Task {
+public class rejectCandidate implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
@@ -28,7 +28,7 @@ public class ShortlistReject implements Task {
         );
     }
 
-    public static ShortlistReject shortlistReject() {
-        return Tasks.instrumented(ShortlistReject.class);
+    public static rejectCandidate shortlistReject() {
+        return Tasks.instrumented(rejectCandidate.class);
     }
 }

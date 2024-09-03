@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.orange.ui.SaveMarkInterviewPassedPage.SAVE_BUTTON;
 
-public class SaveMarkInterviewPassed implements Task {
+public class clickOnSaveMarkInterviewPassed implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -21,7 +21,7 @@ public class SaveMarkInterviewPassed implements Task {
         );
     }
 
-    public static SaveMarkInterviewPassed saveMarkInterviewPassed() {
-        return Tasks.instrumented(SaveMarkInterviewPassed.class);
+    public static clickOnSaveMarkInterviewPassed saveMarkInterviewPassed() {
+        return Tasks.instrumented(clickOnSaveMarkInterviewPassed.class);
     }
 }

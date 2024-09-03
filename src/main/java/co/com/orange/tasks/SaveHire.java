@@ -20,7 +20,7 @@ public class SaveHire implements Task {
         );
     }
 
-    public static SaveHire saveHire() {
+    public static SaveHire clickOnSaveHireButton() {
         return Tasks.instrumented(SaveHire.class);
     }
 }

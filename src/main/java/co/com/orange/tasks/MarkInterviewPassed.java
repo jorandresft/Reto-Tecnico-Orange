@@ -20,7 +20,7 @@ public class MarkInterviewPassed implements Task {
         );
     }
 
-    public static MarkInterviewPassed markInterviewPassed() {
+    public static MarkInterviewPassed clickOnMarkInterviewPassedButton() {
         return Tasks.instrumented(MarkInterviewPassed.class);
     }
 }

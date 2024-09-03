@@ -49,7 +49,7 @@ public class InterviewForm implements Task {
         );
     }
 
-    public static InterviewForm fillInfo(InterviewModel interviewModel) {
+    public static InterviewForm fillInfoInterview(InterviewModel interviewModel) {
         return Tasks.instrumented(InterviewForm.class, interviewModel);
     }
 }

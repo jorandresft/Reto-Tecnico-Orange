@@ -20,7 +20,7 @@ public class SaveShortlist implements Task {
         );
     }
 
-    public static SaveShortlist saveShortlist() {
+    public static SaveShortlist clickOnSaveShortlistButton() {
         return Tasks.instrumented(SaveShortlist.class);
     }
 }

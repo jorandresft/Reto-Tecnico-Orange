@@ -31,7 +31,7 @@ public class Shortlist implements Task {
         );
     }
 
-    public static Shortlist shortList() {
+    public static Shortlist clickOnShortListButton() {
         return Tasks.instrumented(Shortlist.class);
     }
 }

@@ -61,7 +61,7 @@ public class HiredStep {
     @And("select Recruitment and click on add")
     public void selectRecruitmentAndAdd() {
         theActorCalled(ACTOR).attemptsTo(
-                Recruitment.clickRecruitment()
+                Recruitment.clickOnRecruitmentItemAndAddButton()
         );
         LOGGER.info("select Recruitment and click on add");
     }
@@ -69,7 +69,7 @@ public class HiredStep {
     @When("fill all field required")
     public void fillAllFieldRequired(List<CandidateModel> candidateInfo) {
         theActorCalled(ACTOR).attemptsTo(
-                RecruitmentForm.fillInfo(candidateInfo.get(0))
+                RecruitmentForm.fillInfoCandidate(candidateInfo.get(0))
         );
         LOGGER.atInfo()
                 .setMessage("fill all field required, Name: {} Vacancy: {} Email: {}")
@@ -82,8 +82,8 @@ public class HiredStep {
     @And("click on Shortlist and Save")
     public void clickOnShortlistAndSave() {
         theActorCalled(ACTOR).attemptsTo(
-                Shortlist.shortList(),
-                SaveShortlist.saveShortlist()
+                Shortlist.clickOnShortListButton(),
+                SaveShortlist.clickOnSaveShortlistButton()
         );
         LOGGER.info("click on Shortlist and Save");
     }
@@ -91,8 +91,8 @@ public class HiredStep {
     @And("click on Schedule Interview and fill all field required")
     public void schedulesTheInterview(List<InterviewModel> interviewInfo) {
         theActorCalled(ACTOR).attemptsTo(
-                ScheduleInterview.scheduleInterview(),
-                InterviewForm.fillInfo(interviewInfo.get(0))
+                ScheduleInterview.clickOnScheduleInterviewButton(),
+                InterviewForm.fillInfoInterview(interviewInfo.get(0))
         );
         LOGGER.info("click on Schedule Interview and fill all field required");
     }
@@ -100,8 +100,8 @@ public class HiredStep {
     @And("click on mark interview passed and Save")
     public void clickOnMarkInterviewPassedAndSave() {
         theActorCalled(ACTOR).attemptsTo(
-                MarkInterviewPassed.markInterviewPassed(),
-                SaveMarkInterviewPassed.saveMarkInterviewPassed()
+                MarkInterviewPassed.clickOnMarkInterviewPassedButton(),
+                clickOnSaveMarkInterviewPassed.saveMarkInterviewPassed()
         );
         LOGGER.info("click on mark interview passed and Save");
     }
@@ -109,8 +109,8 @@ public class HiredStep {
     @And("click on offer job and Save")
     public void clickOnOfferJobAndSave() {
         theActorCalled(ACTOR).attemptsTo(
-                OfferJob.offerJob(),
-                SaveOfferJob.saveOfferJob()
+                OfferJob.clickOnOfferJobButton(),
+                SaveOfferJob.clickOnSaveOfferJobButton()
         );
         LOGGER.info("click on offer job and Save");
     }
@@ -118,8 +118,8 @@ public class HiredStep {
     @Then("click on Hire and Save")
     public void clickOnHireAndSave() {
         theActorCalled(ACTOR).attemptsTo(
-                Hire.hire(),
-                SaveHire.saveHire(),
+                Hire.clickOnHireButton(),
+                SaveHire.clickOnSaveHireButton(),
                 Hired.getHiredStatus()
         );
         LOGGER.info("click on Hire and Save");

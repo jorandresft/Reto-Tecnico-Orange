@@ -20,7 +20,7 @@ public class ScheduleInterview implements Task {
         );
     }
 
-    public static ScheduleInterview scheduleInterview() {
+    public static ScheduleInterview clickOnScheduleInterviewButton() {
         return Tasks.instrumented(ScheduleInterview.class);
     }
 }

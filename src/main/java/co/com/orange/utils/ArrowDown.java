@@ -60,7 +60,7 @@ public class ArrowDown implements Task {
         );
     }
 
-    public static ArrowDown arrowDown(String vacancy) {
+    public static ArrowDown selectVacancy(String vacancy) {
         return Tasks.instrumented(ArrowDown.class, vacancy);
     }
 }
