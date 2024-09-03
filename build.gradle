@@ -18,7 +18,7 @@ plugins {
 defaultTasks 'clean','test','aggregate'
 apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
 
-group 'co.com.screenplay.project'
+group 'co.com.orange.Reto-Tecnico-Orange'
 version '1.0-SNAPSHOT'
 
 compileJava.options.encoding = "UTF-8"
@@ -72,7 +72,7 @@ test {
 }
 
 serenity {
-    testRoot = "co.com.saucelabs.web.runners"
+    testRoot = "co.com.orange.runners"
     requirementsBaseDir = "src/test/resources/features"
     reports = ["single-page-html"]
 }
